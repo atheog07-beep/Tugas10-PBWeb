@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form> 
+        <h1>
+            Biodata
+        </h1>
+        <hr>
+        <label for="nama">Nama: </label>
+        <input type="text" id="nama" placeholder="Masukkan nama (minimal 3 karakter)" minlength="3" required>
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" id="password" placeholder="Masukkan password (minimal 8 karakter)" required minlength="8">
+        <br>
+        <label for="jenisKelamin">Jenis kelamin: </label>
+        <input type="radio" id="laki-laki" name="jenisKelamin">
+        <label for="laki-laki">Laki-laki </label>
+        <input type="radio" id="perempuan" name="jenisKelamin">
+        <label for="perempuan">Perempuan </label>
+        <br>
+        <label for="statusPerkawinan">Status perkawinan: </label>
+        <input type="radio" id="sudah-menikah" name="statusPerkawinan">
+        <label for="menikah">Sudah Menikah </label>
+        <input type="radio" id="belum-menikah" name="statusPerkawinan">
+        <label for="belum-menikah">Belum menikah </label>
+        <br>
+        <label for="hobby">Hobby: </label><br>
+        <textarea required id="hobby" name="hobby" rows="5" cols="20" minlength="5" placeholder="Masukkan hobi mu (minimal 5 karakter)"></textarea>
+        <br>
+        <label for="penghasilan">Penghasilan: </label>
+            <select id="penghasilan" name="penghasilan" class="pilihan">
+                <option value="" disabled selected>Penghasilan/bulan: </option>
+            </select>
+        <br>
+        <button type="submit">Kirim </button>
+    </form>
+    <script>
+        const daftarPenghasilan = [
+            {
+                penghasilan: "Dibawah 3jt"
+            },
+            {
+                penghasilan: "3jt"
+            },
+            {
+                penghasilan: "Lebih dari 3jt"
+            }
+        ];
+
+        const semuaPenghasilan = document.querySelectorAll(".pilihan");
+        for (const pilihanPenghasilan of semuaPenghasilan) {
+            for (const dataPenghasilan of daftarPenghasilan) {
+                const option = document.createElement("option");
+                option.value = dataPenghasilan.penghasilan;
+                option.textContent = dataPenghasilan.penghasilan;
+                pilihanPenghasilan.appendChild(option);
+            }
+        }
+    </script>
+</body>
+</html>
