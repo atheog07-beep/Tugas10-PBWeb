@@ -1,0 +1,80 @@
+/*table utama, tiga kotak pake garis abu2*/
+#tabel {
+  width: 470px;
+  border: 1px solid #999;
+  border-spacing: 3px;
+}
+
+#tabel td {
+  border: 1px solid #999;
+  padding: 8px 12px;
+}
+
+.isian td {
+  border: none;
+  padding: 0 4px;
+}
+
+/*judul */
+#judul {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #aaa;
+  margin: 0;
+}
+
+/*tabel kecil buat data diri */
+.isian {
+  border-spacing: 0 6px;
+}
+
+.isian td {
+  padding: 0 4px;
+}
+
+.isian td:first-child {
+  width: 140px;
+}
+
+/*kotak isi */
+input[type="text"],
+input[type="password"] {
+  width: 235px;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid #767676;
+  border-radius: 4px;
+}
+
+/*txt hobi*/
+textarea {
+  width: 100%;
+  height: 220px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid #767676;
+  border-radius: 4px;
+}
+
+/*baris penghasilan*/
+.baris-penghasilan {
+  margin: 4px 0;
+}
+
+.baris-penghasilan label {
+  display: inline-block;
+  width: 180px;
+}
+
+select {
+  padding: 1px 4px;
+}
+
+button {
+  margin: 4px 0 20px;
+  padding: 3px 8px;
+}
