@@ -49,9 +49,9 @@
               <tr>
                 <td><b>Jenis kelamin</b>:</td>
                 <td>
-                  <input type="radio" id="laki-laki" name="jenisKelamin" />
+                  <input type="radio" id="laki-laki" name="jenisKelamin" required/>
                   <label for="laki-laki">L</label>
-                  <input type="radio" id="perempuan" name="jenisKelamin" />
+                  <input type="radio" id="perempuan" name="jenisKelamin" required/>
                   <label for="perempuan">P</label>
                 </td>
               </tr>
@@ -78,22 +78,24 @@
               id="hobby"
               name="hobby"
               minlength="5"
-              placeholder="minimal 5 ahong"
+              placeholder="minimal 5 karakter"
               required
             ></textarea>
             <br />
             <div class="baris-penghasilan">
               <label for="penghasilan">Penghasilan:</label>
-              <select
+              <select required
                 id="penghasilan"
                 name="penghasilan"
-                class="pilihan"
-              ></select>
+                class="pilihan">
+              <option value="" disabled selected>Penghasilan/bulan: </option>
+            </select>
             </div>
-            <button type="submit">Kirim</button>
+            <button type="submit" id="kirim">Kirim</button>
           </td>
         </tr>
       </table>
     </form>
+    <script src="script.js"></script>
   </body>
 </html>
